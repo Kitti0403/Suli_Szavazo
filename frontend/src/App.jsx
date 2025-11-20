@@ -23,12 +23,14 @@ function App() {
 
   return (
     <>
-      {polls.length > 0 ? (
-        // ha igaz akkor...
-        polls.map((poll) => <PollCard key={poll.id} poll={poll} />)
-      ) : (
-        <p>Nincs adat</p>
-      )}
+      <div className='grid grid-cols-2'>
+        {polls.length > 0 ? (
+          // ha igaz akkor...
+          polls.map((poll) => <PollCard key={poll.id} poll={poll} />)
+        ) : (
+          <p>Nincs adat</p>
+        )}
+      </div>
     </>
   );
 }
